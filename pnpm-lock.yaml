@@ -152,23 +152,23 @@ importers:
         specifier: ^7.26.0
         version: 7.26.0(@babel/core@7.26.0)
       '@rsbuild/core':
-        specifier: ^1.1.11
-        version: 1.1.11
+        specifier: ^1.1.12
+        version: 1.1.12
       '@rsbuild/plugin-babel':
         specifier: ^1.0.3
-        version: 1.0.3(@rsbuild/core@1.1.11)
+        version: 1.0.3(@rsbuild/core@1.1.12)
       '@rsbuild/plugin-less':
         specifier: ^1.1.0
-        version: 1.1.0(@rsbuild/core@1.1.11)
+        version: 1.1.0(@rsbuild/core@1.1.12)
       '@rsbuild/plugin-sass':
         specifier: ^1.1.2
-        version: 1.1.2(@rsbuild/core@1.1.11)
+        version: 1.1.2(@rsbuild/core@1.1.12)
       '@rsbuild/plugin-vue':
         specifier: ^1.0.5
-        version: 1.0.5(@rsbuild/core@1.1.11)(esbuild@0.24.2)(vue@3.5.13(typescript@5.7.2))
+        version: 1.0.5(@rsbuild/core@1.1.12)(esbuild@0.24.2)(vue@3.5.13(typescript@5.7.2))
       '@rsbuild/plugin-vue-jsx':
         specifier: ^1.0.1
-        version: 1.0.1(@babel/core@7.26.0)(@rsbuild/core@1.1.11)
+        version: 1.0.1(@babel/core@7.26.0)(@rsbuild/core@1.1.12)
       '@vant/eslint-config':
         specifier: workspace:^
         version: link:../vant-eslint-config
@@ -1008,6 +1008,11 @@ packages:
 
   '@rsbuild/core@1.1.11':
     resolution: {integrity: sha512-PZM7yRt6noWycYi2h22QsOQ2VU4bBBgthOblVdu7HKoEM8GwYvVImKd9oNOF5Y5WJLS0TVAkU90DelNttnnQiw==}
+    engines: {node: '>=16.7.0'}
+    hasBin: true
+
+  '@rsbuild/core@1.1.12':
+    resolution: {integrity: sha512-9f+E47fMf51Cg4W7CF2Q4f7BRSslVV/+TRvs5ScclYanqXEFtAGV9nuecJEL6Qc9jJV61lES0esPTFdPPnWPGw==}
     engines: {node: '>=16.7.0'}
     hasBin: true
 
@@ -3653,13 +3658,20 @@ snapshots:
       '@swc/helpers': 0.5.15
       core-js: 3.39.0
 
-  '@rsbuild/plugin-babel@1.0.3(@rsbuild/core@1.1.11)':
+  '@rsbuild/core@1.1.12':
+    dependencies:
+      '@rspack/core': 1.1.8(@swc/helpers@0.5.15)
+      '@rspack/lite-tapable': 1.0.1
+      '@swc/helpers': 0.5.15
+      core-js: 3.39.0
+
+  '@rsbuild/plugin-babel@1.0.3(@rsbuild/core@1.1.12)':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-proposal-decorators': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-class-properties': 7.25.9(@babel/core@7.26.0)
       '@babel/preset-typescript': 7.26.0(@babel/core@7.26.0)
-      '@rsbuild/core': 1.1.11
+      '@rsbuild/core': 1.1.12
       '@types/babel__core': 7.20.5
       deepmerge: 4.3.1
       reduce-configs: 1.0.0
@@ -3667,35 +3679,35 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@rsbuild/plugin-less@1.1.0(@rsbuild/core@1.1.11)':
+  '@rsbuild/plugin-less@1.1.0(@rsbuild/core@1.1.12)':
     dependencies:
-      '@rsbuild/core': 1.1.11
+      '@rsbuild/core': 1.1.12
       deepmerge: 4.3.1
       reduce-configs: 1.0.0
 
-  '@rsbuild/plugin-sass@1.1.2(@rsbuild/core@1.1.11)':
+  '@rsbuild/plugin-sass@1.1.2(@rsbuild/core@1.1.12)':
     dependencies:
-      '@rsbuild/core': 1.1.11
+      '@rsbuild/core': 1.1.12
       deepmerge: 4.3.1
       loader-utils: 2.0.4
       postcss: 8.4.49
       reduce-configs: 1.1.0
       sass-embedded: 1.83.0
 
-  '@rsbuild/plugin-vue-jsx@1.0.1(@babel/core@7.26.0)(@rsbuild/core@1.1.11)':
+  '@rsbuild/plugin-vue-jsx@1.0.1(@babel/core@7.26.0)(@rsbuild/core@1.1.12)':
     dependencies:
-      '@rsbuild/plugin-babel': 1.0.3(@rsbuild/core@1.1.11)
+      '@rsbuild/plugin-babel': 1.0.3(@rsbuild/core@1.1.12)
       '@vue/babel-plugin-jsx': 1.2.5(@babel/core@7.26.0)
       babel-plugin-vue-jsx-hmr: 1.0.0
     optionalDependencies:
-      '@rsbuild/core': 1.1.11
+      '@rsbuild/core': 1.1.12
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
 
-  '@rsbuild/plugin-vue@1.0.5(@rsbuild/core@1.1.11)(esbuild@0.24.2)(vue@3.5.13(typescript@5.7.2))':
+  '@rsbuild/plugin-vue@1.0.5(@rsbuild/core@1.1.12)(esbuild@0.24.2)(vue@3.5.13(typescript@5.7.2))':
     dependencies:
-      '@rsbuild/core': 1.1.11
+      '@rsbuild/core': 1.1.12
       vue-loader: 17.4.2(vue@3.5.13(typescript@5.7.2))(webpack@5.96.1(esbuild@0.24.2))
       webpack: 5.96.1(esbuild@0.24.2)
     transitivePeerDependencies:
